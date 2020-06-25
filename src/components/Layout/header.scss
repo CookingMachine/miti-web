@@ -1,0 +1,14 @@
+html, body, #root, .container {
+    height: 100%;
+}
+
+.layout {
+    background: #fff;
+    margin: 0px auto;
+    padding: 0px;
+
+    .header {
+        padding: 15px;
+        height: 150px;
+    }
+}

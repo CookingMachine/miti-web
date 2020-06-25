@@ -19,13 +19,23 @@ module.exports = (env) => {
                 {
                     test: /\.tsx?$/,
                     loader: 'ts-loader'
+                },
+                {
+                    test: /\.s(a|c)ss$/,
+                    exclude: /node_modules/,
+                    loader: [
+                      'style-loader',
+                      'css-loader',
+                      'sass-loader'
+                    ]
                 }
             ]
         },
         resolve: {
-            extensions: [ '.ts', '.tsx', '.js' ],
+            extensions: [ '.ts', '.tsx', '.js', '.scss'],
             alias: {
                 ['components']: path.resolve(__dirname, 'src/components'),
+                ['styles']: path.resolve(__dirname, 'src/styles'),
                 ['consts']: path.resolve(__dirname, 'src/consts'),
             }
         },
