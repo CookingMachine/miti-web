@@ -8,7 +8,28 @@ html, body, #root, .container {
     padding: 0px;
 
     .header {
-        padding: 15px;
+        padding: 25px 55px 25px 55px;
         height: 150px;
+        
+        .headerLinks {
+            margin-top: 40px;
+        }
+        
+        a {
+            float: right;
+            text-decoration: none;
+            margin-left: 20px;
+            color: #fc3a3b;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        .logo  {
+            float: left;
+            width: 300px;
+            height: 100px;
+            background: #fc3a3b;
+        }
     }
+    
 }
