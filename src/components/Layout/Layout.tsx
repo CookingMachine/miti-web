@@ -1,5 +1,6 @@
 import * as React from "react";
 import Header from "./Header";
+import { Container, InputGroupText } from "reactstrap";
 
 interface LayoutProps {
     children: any;
@@ -7,10 +8,10 @@ interface LayoutProps {
 
 const Layout = ({children}: LayoutProps) => {
     return (
-        <div className='container layout'>
+        <Container className='layout'>
             <Header />
             {children}
-        </div>
+        </Container>
     )
 }
 
