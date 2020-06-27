@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack')
+const tsNameof = require("ts-nameof");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 
@@ -18,7 +19,12 @@ module.exports = (env) => {
             rules: [
                 {
                     test: /\.tsx?$/,
-                    loader: 'ts-loader'
+                    use: [{
+                        loader: 'ts-loader',
+                        options: {
+                            getCustomTransformers: () => ({ before: [tsNameof] })
+                        }
+                    }]
                 },
                 {
                     test: /\.s(a|c)ss$/,
