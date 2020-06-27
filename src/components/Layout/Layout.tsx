@@ -37,6 +37,7 @@ const Layout = ({children, isLoading, init}: Props) => {
     return (
         <Container className='layout'>
             <Header />
+            <Tabs categories={categories} />
             {children}
         </Container>
     )
