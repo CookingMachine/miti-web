@@ -2,6 +2,10 @@ html, body, #root, .container {
     height: 100%;
 }
 
+body {
+    background: linear-gradient(to top right, #FFEBCD, #F5DEB3);
+}
+
 .layout {
     background: #fff;
     margin: 0px auto;
@@ -28,6 +32,22 @@ html, body, #root, .container {
             float: left;
             height: 100px;
         }
+    }
+
+    .menu {
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        text-align: center;
+        // border-top: 1px solid #f2eeee;
+        // border-bottom: 1px solid #f2eeee;
+    }
+
+    .tabNav {
+        text-align: center;
+        margin: 5px 25px;
+        font-size: 0.95em;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-style: bold;
     }
     
 }

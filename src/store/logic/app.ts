@@ -16,9 +16,34 @@ const categoriesMock: Category[] = [
         id: 'salads'
     },
     {
-        name: 'Рыба',
-        id: 'fish'
+        name: 'Супы',
+        id: 'soups'
+    },
+    {
+        name: 'Выпечка',
+        id: 'bakery'
+    },
+    {
+        name: 'Десерты',
+        id: 'deserts'
+    },
+    {
+        name: 'Напитки',
+        id: 'beverages'
+    },
+    {
+        name: 'Соусы',
+        id: 'sauces'
+    },
+    {
+        name: 'Заготовки',
+        id: 'blanks'
+    },
+    {
+        name: 'Второе блюда',
+        id: 'secondaryFoods'
     }
+    
 ]
 
 export const appActions = {
