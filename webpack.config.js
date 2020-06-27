@@ -28,7 +28,11 @@ module.exports = (env) => {
                       'css-loader',
                       'sass-loader'
                     ]
-                }
+                },
+                {
+                    test: /\.(jpg|png)$/,
+                    loader: ['url-loader'],
+                },
             ]
         },
         resolve: {
