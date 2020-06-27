@@ -1,7 +1,7 @@
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-const _fetch = async <T>(url: string, method: HttpMethod, data: any): T => {
+const _fetch = async <T>(url: string, method: HttpMethod, data: any): Promise<T | undefined> => {
     let _uri = encodeURI(url);
     _uri += data && method === 'GET' ? `?${objectToUrlQuery(data)}` : '';
     
@@ -17,6 +17,8 @@ const _fetch = async <T>(url: string, method: HttpMethod, data: any): T => {
         const text = await response.text();
         return JSON.parse(text) as T;
     }
+
+    return undefined;
 }
 
 function objectToUrlQuery(obj: Object): string{

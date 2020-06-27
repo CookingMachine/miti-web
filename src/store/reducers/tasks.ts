@@ -1,7 +1,9 @@
 import { Reducer } from 'redux';
-import { TasksState, KnownAction, UPDATE_TASK, initTasksState } from '../types/tasks-types';
+import { TasksState, KnownAction, UPDATE_TASK } from '../types/tasks-types';
 
-const init = initTasksState();
+const init: TasksState = {
+    list: []
+}
 
 export const reducer: Reducer<TasksState, KnownAction> = (state: TasksState | undefined = init, action: KnownAction): TasksState => {
     switch (action.type) {

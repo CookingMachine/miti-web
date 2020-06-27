@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import { ApplicationState } from 'store/types/common';
 
 import * as Tasks from './reducers/tasks';
+import * as Food from './reducers/food';
 
 export default function configureStore(initialState?: ApplicationState) {
     const middleware = [
@@ -10,7 +11,8 @@ export default function configureStore(initialState?: ApplicationState) {
     ];
 
     const rootReducer = combineReducers({
-        tasks: Tasks.reducer
+        tasks: Tasks.reducer,
+        food: Food.reducer,
     });
 
     const enhancers = [];

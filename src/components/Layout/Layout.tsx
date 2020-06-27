@@ -1,5 +1,4 @@
 import * as React from "react";
-import Header from "./Header";
 import { Container } from "reactstrap";
 import { BoundActions, ApplicationState } from "store/types/common";
 import { appActions } from "store/logic/app";
@@ -7,6 +6,10 @@ import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
 import { getIsAppLoading } from "store/selectors/app-selectors";
 import { useEffect } from "react";
+import { Category } from "store/types/food-types";
+import { getCategories } from "store/selectors/food-selectors";
+import Header from "./Header";
+import Tabs from "./Tabs";
 
 interface OwnProps {
     children: any;
@@ -14,13 +17,14 @@ interface OwnProps {
 
 interface StateProps {
     isLoading: boolean;
+    categories: Category[];
 }
 
 type DispatchProps = BoundActions<typeof appActions>
 
 type Props = OwnProps & StateProps & DispatchProps
 
-const Layout = ({children, isLoading, init}: Props) => {
+const Layout = ({children, isLoading, categories, init}: Props) => {
     
     useEffect(() => {
         init();
@@ -44,7 +48,8 @@ const Layout = ({children, isLoading, init}: Props) => {
 }
 
 const mapStateToProps = (state: ApplicationState, props: OwnProps): StateProps => ({
-    isLoading: getIsAppLoading(state)
+    isLoading: getIsAppLoading(state),
+    categories: getCategories(state)
 })
 
 const mapDispatchToProps = (dispatch: Dispatch, props: OwnProps): DispatchProps => ({

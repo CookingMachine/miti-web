@@ -1,4 +1,4 @@
-import { UpdateTask, TaskStatus, TaskObject} from '../types/tasks-types'
+import { UpdateTask, TaskStatus, Task} from '../types/tasks-types'
 import { Dispatch } from 'redux';
 import { getTasks, createTaskSelector } from '../selectors/tasks-selectors'
 import { GetState } from 'store/types/common';
@@ -15,7 +15,7 @@ export async function run(type: TaskEnum, objectId: any, dispatch: Dispatch, get
     if (isRunning) {
         return true;
     }
-    let task: TaskObject = {
+    let task: Task = {
         id: getId(),
         type: type,
         objectId: objectId,

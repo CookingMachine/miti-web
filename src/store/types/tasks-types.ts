@@ -5,7 +5,7 @@ export enum TaskStatus {
     Failed,
 }
 
-export interface TaskObject {
+export interface Task {
     id: number;
     type: string;
     objectId: any;
@@ -18,22 +18,15 @@ export interface TaskObject {
 
 
 export interface TasksState {
-    list: TaskObject[];
+    list: Task[];
 }
-
-export function initTasksState(): TasksState {
-    return {
-        list: []
-    };
-}
-
 
 export const UPDATE_TASK = "UPDATE_TASK";
 interface UpdateTaskAction {
     type: typeof UPDATE_TASK;
-    task: TaskObject;
+    task: Task;
 }
-export function UpdateTask(task: TaskObject): UpdateTaskAction {
+export function UpdateTask(task: Task): UpdateTaskAction {
     return {
         type: UPDATE_TASK,
         task: task,

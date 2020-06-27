@@ -1,9 +1,12 @@
 import { Action, AnyAction, ActionCreatorsMapObject } from 'redux';
 import { ThunkAction } from 'redux-thunk';
+
 import * as Tasks from './tasks-types';
+import * as Food from './food-types';
 
 export interface ApplicationState {
     tasks: Tasks.TasksState;
+    food: Food.FoodState;
 };
 
 export interface GetState {
