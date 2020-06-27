@@ -46,6 +46,7 @@ module.exports = (env) => {
             alias: {
                 ['components']: path.resolve(__dirname, 'src/components'),
                 ['styles']: path.resolve(__dirname, 'src/styles'),
+                ['store']: path.resolve(__dirname, 'src/store'),
                 ['consts']: path.resolve(__dirname, 'src/consts'),
             }
         },
