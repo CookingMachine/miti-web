@@ -18,9 +18,9 @@ const Tabs = ({categories}: Props) => {
         <div className="menu">
             <Navbar color="white" light expand="md">
                 {
-                    categories.map((category =>  {
+                    categories.map(((category, i) =>  {
                         return (
-                            <NavbarBrand className="tabNav" href="/">
+                            <NavbarBrand key={i} className="tabNav" href="/">
                                 {category.name}
                             </NavbarBrand>
                         )

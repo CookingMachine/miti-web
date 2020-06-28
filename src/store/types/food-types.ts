@@ -4,8 +4,18 @@ export interface Category {
     id: string;
 }
 
+export interface Recipe {
+    name: string;
+    imageUrl: string;
+    description: string;
+    time: number;
+    portions: number;
+    views: number;
+}
+
 export interface FoodState {
     categories: Category[];
+    recipes: Recipe[];
 }
 
 export const RECEIVE_CATEGORIES = "RECEIVE_CATEGORIES";
@@ -20,4 +30,16 @@ export function receiveCategories(categories: Category[]): ReceiveCategoriesActi
     };
 }
 
-export type KnownAction = ReceiveCategoriesAction;
+export const RECEIVE_RECIPES = "RECEIVE_RECIPES";
+interface ReceiveRecipesAction {
+    type: typeof RECEIVE_RECIPES;
+    recipes: Recipe[];
+}
+export function receiveRecipes(recipes: Recipe[]): ReceiveRecipesAction {
+    return {
+        type: RECEIVE_RECIPES,
+        recipes: recipes
+    };
+}
+
+export type KnownAction = ReceiveCategoriesAction | ReceiveRecipesAction;
