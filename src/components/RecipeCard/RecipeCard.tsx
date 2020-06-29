@@ -9,22 +9,24 @@ interface OwnProps {
 
 const RecipeCard = ({recipe}: OwnProps) => {
     return (
-        <Card className='recipe-card'>
-            <CardImg top width="100%" src={img} alt={recipe.name} />
-            <CardBody>
-                <CardTitle>
-                    {recipe.name}
-                </CardTitle>
-                <CardSubtitle>
-                    <span>{recipe.time} минут</span>
-                    <span>{recipe.portions}</span>
-                    <span>{recipe.views}</span>
-                </CardSubtitle>
-                <CardText>
-                    {recipe.description}
-                </CardText>
-            </CardBody>
-        </Card>
+        <div className="recipe-card">
+            <Card className='card-box'>
+                <CardImg top width="100%" src={img} alt={recipe.name} />
+                <CardBody>
+                    <CardTitle>
+                        {recipe.name}
+                    </CardTitle>
+                    <CardSubtitle>
+                        <span>{recipe.time} мин.</span>
+                        <span>{recipe.portions}</span>
+                        <span>{recipe.views}</span>
+                    </CardSubtitle>
+                    <CardText>
+                        {recipe.description}
+                    </CardText>
+                </CardBody>
+            </Card>
+        </div>
     )
 }
 

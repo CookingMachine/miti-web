@@ -1,6 +1,17 @@
 .recipe-card {
+    padding-top: 20px;
+    margin: 0px auto;
+    padding-left: 0px;
+    padding-right: 0px;
+
     .card-subtitle {
-        display: flex;
+        display: grid;
         justify-content: space-between;
+    }
+
+    .card-box {
+        width: 275px;
+        color: #666666;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 }

@@ -10,6 +10,7 @@ import { Category } from "store/types/food-types";
 import { getCategories } from "store/selectors/food-selectors";
 import Header from "./Header";
 import Tabs from "./Tabs";
+import Footer from "./Footer";
 
 interface OwnProps {
     children: any;
@@ -43,6 +44,7 @@ const Layout = ({children, isLoading, categories, init}: Props) => {
             <Header />
             <Tabs categories={categories} />
             {children}
+            <Footer />
         </Container>
     )
 }

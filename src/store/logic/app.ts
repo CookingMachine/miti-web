@@ -41,7 +41,7 @@ const categoriesMock: Category[] = [
     }
 ]
 
-const recipesMock: Recipe[] = [1, 2, 3, 4, 5].map(i => ({
+const recipesMock: Recipe[] = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => ({
     name: `Recipe ${i}`,
     description: `description ${i}`,
     imageUrl: '',
