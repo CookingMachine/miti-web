@@ -3,6 +3,10 @@ import { Switch, Route } from "react-router-dom";
 import Home from "components/Home/Home";
 import Layout from "components/Layout/Layout";
 import CategoryDetails from "components/CategoryDetails/CategoryDetails";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
+library.add(far)
 
 const App = () => {
     return (

@@ -1,6 +1,8 @@
 import React from "react";
 import { Recipe } from "store/types/food-types";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from "reactstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 import img from './food.jpg';
 
 interface OwnProps {
@@ -17,7 +19,10 @@ const RecipeCard = ({recipe}: OwnProps) => {
                         {recipe.name}
                     </CardTitle>
                     <CardSubtitle>
-                        <span>{recipe.time} мин.</span>
+                        <span>
+                            <FontAwesomeIcon icon={faClock} />
+                            {recipe.time} мин.
+                        </span>
                         <span>{recipe.portions}</span>
                         <span>{recipe.views}</span>
                     </CardSubtitle>
