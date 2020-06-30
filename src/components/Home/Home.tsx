@@ -20,7 +20,7 @@ const Home = ({recipes}: Props) => {
         <div className='home-content'>
             <div className='recipes'>
                 {recipes.map((recipe, i) => (
-                    <RecipeCard recipe={recipe}/>
+                    <RecipeCard key={i} recipe={recipe}/>
                 ))}
             </div>
         </div>

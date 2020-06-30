@@ -49,6 +49,7 @@ module.exports = (env) => {
                 ['styles']: path.resolve(__dirname, 'src/styles'),
                 ['store']: path.resolve(__dirname, 'src/store'),
                 ['consts']: path.resolve(__dirname, 'src/consts'),
+                ['urls']: path.resolve(__dirname, 'src/urls'),
             }
         },
         devServer: {

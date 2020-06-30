@@ -1,6 +1,7 @@
 
 export interface Category {
     name: string;
+    description: string;
     id: string;
 }
 
@@ -11,6 +12,7 @@ export interface Recipe {
     time: number;
     portions: number;
     views: number;
+    // categoryId: string;
 }
 
 export interface FoodState {

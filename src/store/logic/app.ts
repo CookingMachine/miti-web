@@ -5,39 +5,48 @@ import { Category, receiveCategories, Recipe, receiveRecipes } from "store/types
 const categoriesMock: Category[] = [
     {
         name: 'Закуски',
-        id: 'snacks'
+        id: 'snacks',
+        description: 'Описание категории Закуски'
     },
     {
         name: 'Салаты',
-        id: 'salads'
+        id: 'salads',
+        description: 'Описание категории Салаты'
     },
     {
         name: 'Супы',
-        id: 'soups'
+        id: 'soups',
+        description: 'Описание категории Супы'
     },
     {
         name: 'Выпечка',
-        id: 'bakery'
+        id: 'bakery',
+        description: 'Описание категории Выпечка'
     },
     {
         name: 'Десерты',
-        id: 'deserts'
+        id: 'deserts',
+        description: 'Описание категории Десерты'
     },
     {
         name: 'Напитки',
-        id: 'beverages'
+        id: 'beverages',
+        description: 'Описание категории Напитки'
     },
     {
         name: 'Соусы',
-        id: 'sauces'
+        id: 'sauces',
+        description: 'Описание категории Соусы'
     },
     {
         name: 'Заготовки',
-        id: 'blanks'
+        id: 'blanks',
+        description: 'Описание категории Заготовки'
     },
     {
         name: 'Второе блюда',
-        id: 'secondaryFoods'
+        id: 'secondaryFoods',
+        description: 'Описание категории Второе блюда'
     }
 ]
 

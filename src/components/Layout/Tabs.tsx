@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Row, Col, Navbar, NavbarBrand } from 'reactstrap';
+import { Navbar, NavbarBrand } from 'reactstrap';
+import { urls } from 'urls';
 
 interface Props {
     categories: Category[];
@@ -20,7 +21,7 @@ const Tabs = ({categories}: Props) => {
                 {
                     categories.map(((category, i) =>  {
                         return (
-                            <NavbarBrand key={i} className="tabNav" href="/">
+                            <NavbarBrand key={i} className="tabNav" href={urls.category(category.id)}>
                                 {category.name}
                             </NavbarBrand>
                         )

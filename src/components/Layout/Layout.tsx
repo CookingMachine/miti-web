@@ -42,7 +42,9 @@ const Layout = ({children, isLoading, categories, init}: Props) => {
         <Container className='layout'>
             <Header />
             <Tabs categories={categories} />
-            {children}
+            <div className='layout-content'>
+                {children}
+            </div>
         </Container>
     )
 }
