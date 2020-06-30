@@ -10,6 +10,12 @@ export const getCategory = createSelector(
     (categories, id) => categories.find(c => c.id === id)
 )
 
+const getRecipeId = (state: ApplicationState, id: number) => id;
+export const getRecipeById = createSelector(
+    [getRecipes, getRecipeId],
+    (recipes, id) => recipes.find(r => r.id === id)
+)
+
 export const getRecipesByCategory = createSelector(
     [getRecipes, getCategoryId],
     (recipes, categoryId) => recipes.slice(0, 3) // TODO recipes.filter(r => r.categoryId === categoryId)

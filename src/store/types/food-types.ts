@@ -6,6 +6,7 @@ export interface Category {
 }
 
 export interface Recipe {
+    id: number;
     name: string;
     imageUrl: string;
     description: string;

@@ -4,35 +4,40 @@ import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import img from './food.png';
+import { Link, withRouter, RouteComponentProps } from "react-router-dom";
+import urls from "urls";
 
-interface OwnProps {
+interface OwnProps extends RouteComponentProps {
     recipe: Recipe;
 }
 
 const RecipeCard = ({recipe}: OwnProps) => {
+
     return (
         <div className="recipe-card">
-            <Card className='card-box'>
-                <CardImg top width="100%" src={img} alt={recipe.name} />
-                <CardBody>
-                    <CardTitle>
-                        {recipe.name}
-                    </CardTitle>
-                    <CardSubtitle>
-                        <span>
-                            <FontAwesomeIcon icon={faClock} />
-                            {recipe.time} мин.
-                        </span>
-                        <span>{recipe.portions}</span>
-                        <span>{recipe.views}</span>
-                    </CardSubtitle>
-                    <CardText>
-                        {recipe.description}
-                    </CardText>
-                </CardBody>
-            </Card>
+            <Link to={urls.recipe(recipe.id)}>
+                <Card className='card-box'>
+                    <CardImg top width="100%" src={img} alt={recipe.name} />
+                    <CardBody>
+                        <CardTitle>
+                            {recipe.name}
+                        </CardTitle>
+                        <CardSubtitle>
+                            <span>
+                                <FontAwesomeIcon icon={faClock} />
+                                {recipe.time} мин.
+                            </span>
+                            <span>{recipe.portions}</span>
+                            <span>{recipe.views}</span>
+                        </CardSubtitle>
+                        <CardText>
+                            {recipe.description}
+                        </CardText>
+                    </CardBody>
+                </Card>
+            </Link>
         </div>
     )
 }
 
-export default RecipeCard;
+export default withRouter(RecipeCard);

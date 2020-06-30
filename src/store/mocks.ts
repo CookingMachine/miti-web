@@ -50,6 +50,7 @@ namespace mocks {
     ]
     
     export const recipesMock: Recipe[] = enumerate(10).map(i => ({
+        id: i,
         name: `Recipe ${i}`,
         description: `description ${i}`,
         imageUrl: '',

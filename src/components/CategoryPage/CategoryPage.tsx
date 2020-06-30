@@ -17,12 +17,12 @@ interface StateProps {
 
 type Props = OwnProps & StateProps;
 
-const CategoryDetails = ({category, recipes}: Props) => {
+const CategoryPage = ({category, recipes}: Props) => {
 
     if (!category) return <></>;
 
     return (
-        <div className='category-content'>
+        <div className='category-page'>
             <Row>
                 <Col xs={9}>
                     <h1>{category.name}</h1>
@@ -46,5 +46,5 @@ const mapStateToProps = (state: ApplicationState, props: OwnProps): StateProps =
     }
 }
 
-const Connected = connect<StateProps, {}, OwnProps, ApplicationState>(mapStateToProps)(CategoryDetails);
+const Connected = connect<StateProps, {}, OwnProps, ApplicationState>(mapStateToProps)(CategoryPage);
 export default withRouter<Props, typeof Connected>(Connected);
