@@ -10,7 +10,7 @@ const Header = ({}: Props) => {
     return (
        <Row className="header">
             <Col md={4}>
-            <a href=""> <img src={logo}/></a>
+            <a href="/"> <img src={logo}/></a>
             </Col>
             <Col md={4}>
             </Col>
