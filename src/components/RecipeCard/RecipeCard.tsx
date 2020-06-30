@@ -3,7 +3,7 @@ import { Recipe } from "store/types/food-types";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from "@fortawesome/free-regular-svg-icons";
-import img from './food.jpg';
+import img from './food.png';
 
 interface OwnProps {
     recipe: Recipe;
