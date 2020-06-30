@@ -13,7 +13,8 @@ module.exports = (env) => {
         entry: './src/index.tsx',
         output: {
             filename: 'main.js',
-            path: path.resolve(__dirname, 'dist')
+            path: path.resolve(__dirname, 'dist'),
+            publicPath: '/'
         },
         module: {
             rules: [
@@ -49,6 +50,9 @@ module.exports = (env) => {
                 ['store']: path.resolve(__dirname, 'src/store'),
                 ['consts']: path.resolve(__dirname, 'src/consts'),
             }
+        },
+        devServer: {
+            historyApiFallback: true,
         },
         plugins: [
             new HtmlWebpackPlugin({
