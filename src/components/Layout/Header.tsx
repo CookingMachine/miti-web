@@ -10,13 +10,13 @@ const Header = ({}: Props) => {
     return (
        <Row className="header">
             <Col md={4}>
-                <img src={logo}/>
+            <a href=""> <img src={logo}/></a>
             </Col>
             <Col md={4}>
             </Col>
             <Col md={4}>
                 <div className="headerLinks">
-                    <a href="" className="mapLink">  {/* TODO u use link instead of teg 'a' */}
+                    <a href="" className="mapLink">  {/* TODO u use link instead of teg 'a' MAKE IT TODAY */}
                         Карта сайта
                     </a>
                     <a href="" className="feddbackLink">
