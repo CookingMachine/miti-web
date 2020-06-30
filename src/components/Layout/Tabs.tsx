@@ -1,18 +1,11 @@
 import * as React from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import { urls } from 'urls';
+import { Category } from 'store/types/food-types';
 
 interface Props {
     categories: Category[];
 }
-
-
-export interface Category {
-    name: string;
-    id: string;
-}
-
-
 
 const Tabs = ({categories}: Props) => {
     return (

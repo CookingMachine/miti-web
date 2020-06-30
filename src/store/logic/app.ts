@@ -64,7 +64,7 @@ export const appActions = {
         await run(TaskEnum.loadApp, null, dispatch, getState, async () => {
 
             // fetching data...
-            await new Promise(r => setTimeout(r, 1000));
+            // await new Promise(r => setTimeout(r, 50));
 
             dispatch(receiveCategories(categoriesMock));
             dispatch(receiveRecipes(recipesMock));

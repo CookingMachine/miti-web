@@ -12,5 +12,10 @@ export const getCategory = createSelector(
 
 export const getRecipesByCategory = createSelector(
     [getRecipes, getCategoryId],
-    (recipes, categoryId) => recipes.slice(0, 3) // recipes.filter(r => r.categoryId === categoryId)
+    (recipes, categoryId) => recipes.slice(0, 3) // TODO recipes.filter(r => r.categoryId === categoryId)
+)
+
+export const getPopularRecipes = createSelector(
+    [getRecipes],
+    (recipes) => recipes.slice(0, 5) // TODO
 )
