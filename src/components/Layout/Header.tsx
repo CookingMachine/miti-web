@@ -16,10 +16,13 @@ const Header = ({}: Props) => {
             </Col>
             <Col md={4}>
                 <div className="headerLinks">
-                    <a href="" className="mapLink">  {/* TODO u use link instead of teg 'a' MAKE IT TODAY */}
+                    <a href="/login">
+                        Вход
+                    </a>
+                    <a href="">  {/* TODO u use link instead of teg 'a' MAKE IT TODAY */}
                         Карта сайта
                     </a>
-                    <a href="" className="feddbackLink">
+                    <a href="">
                         Обратная связь
                     </a>
                 </div>

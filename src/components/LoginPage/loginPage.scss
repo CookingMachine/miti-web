@@ -1,0 +1,14 @@
+.login-page {
+    text-align: center;
+    > div {
+        display: inline-block;
+
+        form {
+            width: 450px;
+
+            button {
+                float: right;
+            }
+        }
+    }
+}
