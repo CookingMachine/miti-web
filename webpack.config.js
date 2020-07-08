@@ -62,7 +62,7 @@ module.exports = (env) => {
             }),
             new ErrorOverlayPlugin(),
             new webpack.DefinePlugin({
-                __API__: JSON.stringify('http://localhost:8080/'),
+                __API__: JSON.stringify('https://miti-serv.herokuapp.com'),
                 __ENV__: JSON.stringify(environment)
             })
         ]

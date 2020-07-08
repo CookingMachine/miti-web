@@ -1,8 +1,9 @@
+import { __API__ } from "consts";
 
 export type HTTPMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 const _fetch = async <T>(uri: string, method?: HTTPMethod, data?: object): Promise<T> => {
-    const encodedURI = encodeURI(uri);
+    const encodedURI = encodeURI(`${__API__}/${uri}`);
     const fullURI = data && method === "GET" ? `${encodedURI}?${objectToUrlQuery(data)}` : encodedURI;
 
     const response = await fetch(fullURI, {
@@ -10,7 +11,8 @@ const _fetch = async <T>(uri: string, method?: HTTPMethod, data?: object): Promi
         body: method === "GET" ? undefined : JSON.stringify(data),
         headers: {
             "Content-Type": "application/json; charset=utf-8",
-        }
+        },
+        mode: "no-cors"
     });
 
     if (response.ok) {
