@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 
 module.exports = (env) => {
-    const environment = env && env.NODE_ENV || 'dev';
+    const environment = env && env.NODE_ENV || 'development';
 
     return {
         devtool: 'inline-source-map',
@@ -49,6 +49,7 @@ module.exports = (env) => {
                 ['styles']: path.resolve(__dirname, 'src/styles'),
                 ['store']: path.resolve(__dirname, 'src/store'),
                 ['consts']: path.resolve(__dirname, 'src/consts'),
+                ['services']: path.resolve(__dirname, 'src/services'),
                 ['urls']: path.resolve(__dirname, 'src/urls'),
             }
         },

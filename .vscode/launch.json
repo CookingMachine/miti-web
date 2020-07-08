@@ -1,14 +1,24 @@
 {
     "compounds": [
         {
-            "name": "[Dev + Chrome]",
-            "configurations": ["Launch Dev server", "Launch Chrome"]
+            "name": "[Server + Chrome] (dev)",
+            "configurations": ["Launch server [dev]", "Launch Chrome"]
+        }
+        {
+            "name": "[Server + Chrome] (local)",
+            "configurations": ["Launch server [local]", "Launch Chrome"]
         }
     ],
     "configurations": [
         {
-            "command": "npm start",
-            "name": "Launch Dev server",
+            "command": "npm run start:dev",
+            "name": "Launch server [dev]",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npm run start:local",
+            "name": "Launch server [local]",
             "request": "launch",
             "type": "node-terminal"
         },

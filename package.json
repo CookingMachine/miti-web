@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "bundle": "webpack",
-    "start": "webpack-dev-server --env.NODE_ENV=dev --mode development --hot",
-    "build": "webpack --env.NODE_ENV=prod --env.NODE_ENV=prod --mode production"
+    "start:local": "webpack-dev-server --env.NODE_ENV=local --mode development --hot",
+    "start:dev": "webpack-dev-server --env.NODE_ENV=development --mode development --hot",
+    "build": "webpack --env.NODE_ENV=prod --env.NODE_ENV=production --mode production"
   },
   "keywords": [],
   "author": "",

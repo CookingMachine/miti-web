@@ -1,5 +1,5 @@
 declare const __API__: string;
-declare const __ENV__: 'dev' | 'prod';
+declare const __ENV__: 'development' | 'production' | 'local';
 
 const api = __API__;
 const env = __ENV__;
