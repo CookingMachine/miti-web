@@ -5,6 +5,7 @@ import { GetState } from 'store/types/common';
 
 export enum  TaskEnum {
     loadApp = "loadApp",
+    authenticate = "authenticate",
 };
 
 export async function run(type: TaskEnum, objectId: any, dispatch: Dispatch, getState: GetState, fun: () => Promise<boolean>, discription?: string): Promise<boolean> {

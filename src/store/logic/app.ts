@@ -5,6 +5,10 @@ import mocks from "store/mocks";
 import _fetch from "services/sessionService";
 import { __ENV__ } from "consts";
 
+interface UserResponse {
+    token: string;
+}
+
 export const appActions = {
     init: (): AppThunkAction => async (dispatch, getState) => {
         await run(TaskEnum.loadApp, null, dispatch, getState, async () => {
@@ -20,6 +24,15 @@ export const appActions = {
 
             dispatch(receiveCategories(categories));
             dispatch(receiveRecipes(recipes));
+
+            return true;
+        });
+    },
+    authenticate: (login: string, password: string) => async (dispatch, getState) => {
+        await run(TaskEnum.loadApp, null, dispatch, getState, async () => {
+
+            const response = await _fetch<UserResponse>('auth', 'POST', {login, password});
+            // TODO implement sessionService, save token to localStorage
 
             return true;
         });
