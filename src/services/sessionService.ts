@@ -2,7 +2,7 @@ import { __API__ } from "consts";
 
 export type HTTPMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
-const _fetch = async <T>(uri: string, method?: HTTPMethod, data?: object): Promise<T> => {
+export const _fetch = async <T>(uri: string, method?: HTTPMethod, data?: object): Promise<T> => {
     const encodedURI = encodeURI(`${__API__}/${uri}`);
     const fullURI = data && method === "GET" ? `${encodedURI}?${objectToUrlQuery(data)}` : encodedURI;
 
@@ -10,9 +10,8 @@ const _fetch = async <T>(uri: string, method?: HTTPMethod, data?: object): Promi
         method: method || "GET",
         body: method === "GET" ? undefined : JSON.stringify(data),
         headers: {
-            "Content-Type": "application/json; charset=utf-8",
+            // "Content-Type": "application/json; charset=utf-8",
         },
-        mode: "no-cors"
     });
 
     if (response.ok) {
@@ -37,4 +36,10 @@ function objectToUrlQuery(obj: Record<string, any>): string{
     return list.join("&");
 }
 
-export default _fetch;
+
+class SessionService {
+    constructor() {
+    }
+}
+
+export const sessionService = new SessionService();

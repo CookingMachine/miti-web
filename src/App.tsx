@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import RecipePage from "components/RecipePage/RecipePage";
 import LoginPage from "components/LoginPage/LoginPage";
+import AdminHomePage from "components/AdminHomePage/AdminHomePage";
 
 library.add(far)
 
@@ -18,6 +19,7 @@ const App = () => {
                 <Route exact path='/login' component={LoginPage} />
                 <Route exact path='/category/:id' component={CategoryPage} />
                 <Route exact path='/recipe/:id' component={RecipePage} />
+                <Route exact path='/admin' component={AdminHomePage} />
            </Switch>
        </Layout>
     );

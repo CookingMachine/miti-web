@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Input, Label, Col, Button } from "reactstrap";
+import { withRouter, RouteComponentProps } from "react-router-dom";
+import urls from "urls";
 
-interface Props {
+interface Props extends RouteComponentProps {
 
 }
 
-const LoginPage = ({}: any) => {
+const LoginPage = ({history}: Props) => {
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
+
+    const handleSubmit = () => {
+        // FIXME Call api
+        history.push(urls.adminHome);
+    }
 
     return (
         <div className='login-page'>
@@ -27,7 +34,7 @@ const LoginPage = ({}: any) => {
                         </Col>
                     </FormGroup>
                     <FormGroup>
-                        <Button>Submit</Button>
+                        <Button onClick={handleSubmit}>Submit</Button>
                     </FormGroup>
                 </Form>
             </div>
@@ -35,4 +42,4 @@ const LoginPage = ({}: any) => {
     )
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);

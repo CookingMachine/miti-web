@@ -2,7 +2,7 @@ import { AppThunkAction } from "store/types/common";
 import { run, TaskEnum } from "./tasks-logic";
 import { receiveCategories, receiveRecipes, Category, Recipe } from "store/types/food-types";
 import mocks from "store/mocks";
-import _fetch from "services/sessionService";
+import { _fetch } from "services/sessionService";
 import { __ENV__ } from "consts";
 
 interface UserResponse {
