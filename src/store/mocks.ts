@@ -57,6 +57,8 @@ namespace mocks {
         time: i * 10,
         portions: i + 1,
         views: Math.pow(10, i),
+        comments: Math.pow(5, i),
+        likes: Math.pow(39, i),
     }))
 
     function enumerate(count: number) {

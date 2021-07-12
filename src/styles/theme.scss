@@ -1,5 +1,40 @@
-
+// Colors
 $body-color: #222;
+$secondary: #222;
+$primary: #E92222;
 
-$primary: #222;
-$secondary: #fc3a3b;
+$enable-prefers-reduced-motion-media-query: false;
+
+// Button
+
+$btn-border-radius: 20px;
+$btn-border-width: 1px;
+$btn-padding-y: 10px;
+$btn-padding-x: 19px;
+$btn-font-size: 15px;
+
+// Inputs
+
+$input-group-addon-bg: #fff;
+$input-border-radius: 15px;
+$input-btn-focus-width: 0px;
+$input-focus-border-color:none;
+$input-border-color: #E4E4E4;
+$input-placeholder-color:  #9A9A9A;
+
+// Cards
+
+$card-border-width: 0px;
+$card-spacer-y: 5px;
+$card-spacer-x: 1.25em;
+
+body .btn-primary {
+    background-color: #fff;
+    color: #E92222;
+}
+
+body .header .input-group-text {
+    border-right: none;
+   
+}
+

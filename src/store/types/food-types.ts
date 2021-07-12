@@ -5,14 +5,27 @@ export interface Category {
     id: string;
 }
 
+export interface restaurants {
+    id: number;
+    name: string;
+    station: string;
+    recipes: number;
+    bill: number;
+    views: number;
+    comments: number;
+    likes: number;
+}
+
 export interface Recipe {
     id: number;
     name: string;
     imageUrl: string;
     description: string;
-    time: number;
     portions: number;
+    time: number;
     views: number;
+    comments: number;
+    likes: number;
     // categoryId: string;
 }
 
