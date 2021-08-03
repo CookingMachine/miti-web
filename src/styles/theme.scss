@@ -7,16 +7,16 @@ $enable-prefers-reduced-motion-media-query: false;
 
 // Button
 
-$btn-border-radius: 20px;
+$btn-border-radius: 30px;
 $btn-border-width: 1px;
 $btn-padding-y: 10px;
 $btn-padding-x: 19px;
-$btn-font-size: 15px;
+$btn-font-size: 14px;
 
 // Inputs
 
 $input-group-addon-bg: #fff;
-$input-border-radius: 15px;
+$input-border-radius: 20px;
 $input-btn-focus-width: 0px;
 $input-focus-border-color:none;
 $input-border-color: #E4E4E4;
@@ -35,6 +35,13 @@ body .btn-primary {
 
 body .header .input-group-text {
     border-right: none;
-   
 }
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1250px
+)
+
 

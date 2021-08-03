@@ -1,11 +1,45 @@
-html, body, #root, .container {
-    width: 100%;
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+}
+
+#root {
+    min-height: 100%;
 }
 
 
 
-body {
-    background: #DCDCDC;
+.logo {
+    display: flex;
+    text-decoration: none;
+    color: #E92222;
+    font-family: 'Akronim', cursive;
+    font-size: 2.85em;
+}
+
+.footer {
+    padding: 30px;
+    background: #fff;
+    height: 300px;
+    margin: 0px auto;
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    
+    .logo {
+        
+        text-decoration: none;
+        color: #E92222;
+        font-family: 'Akronim', cursive;
+        font-size: 2.85em;
+    }
+
+
+    .logo {
+        margin: 0 auto;
+    }
 }
 
 .header {
@@ -15,30 +49,28 @@ body {
     height: 100px;
     border-bottom: 1px solid #E4E4E4;
     background: #fff;
-    
-.footer-box {
-    padding: 30px;
-    background: grey;
-    height: 300px;
-    width: 100px;
-    border: 1px solid red;
-}
 
     .buttonsAuth {
         color: #000;
         text-align: right;
     }
 
+    
+
     .buttonsAuth svg {
-        margin-bottom: 2px;
+        margin-bottom: 3px;
     }
     
     a {
         font-family: 'Roboto', sans-serif;
         color: #000;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         text-align: left;
+    }
+
+    .buttonsAuth a:hover {
+        color: #E92222;
     }
 
     .logo {
@@ -51,15 +83,23 @@ body {
 
      input {
         border-left: none;
-}
-
+    }   
 }
 
 .layout {
+    
     background: #fff;
     margin: 0px auto;
     padding: 0px;
     height: 100%;
+
+    .layout-content {
+        min-height: 100%;
+        padding-left: 1em;
+        padding-top: 1em;
+        padding-right: 1em;
+        padding-bottom: 4.5em;
+    }
 
     .menu {
         box-shadow: 0 0 5px rgba(0,0,0,0.1);

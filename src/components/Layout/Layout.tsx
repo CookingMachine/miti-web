@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Container } from "reactstrap";
+import * as React from 'react';
+import { Container } from "reactstrap"
 import { BoundActions, ApplicationState } from "store/types/common";
 import { appActions } from "store/logic/app";
 import { connect } from "react-redux";
@@ -47,8 +47,8 @@ const Layout = ({children, isLoading, categories, init}: Props) => {
                 <div className='layout-content'>
                     {children}
                 </div>
-                <Footer />
             </Container>
+            <Footer />
         </div>
     )
 }

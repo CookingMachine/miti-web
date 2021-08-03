@@ -27,6 +27,7 @@ const CategoryPage = ({category, recipes}: Props) => {
                 <Col xs={6}>
                     <h1>{category.name}</h1>
                     {category.description}
+                    <p>Сортировать по: <span>по релевантности</span><span>по дате добавления</span><span>по популярности</span></p>
                     {recipes.map((recipe, i) => (
                         <RecipeCard key={i} recipe={recipe} />
                     ))}
