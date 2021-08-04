@@ -9,9 +9,14 @@ $enable-prefers-reduced-motion-media-query: false;
 
 $btn-border-radius: 30px;
 $btn-border-width: 1px;
-$btn-padding-y: 10px;
-$btn-padding-x: 19px;
+$btn-padding-y: 12px;
+$btn-padding-x: 37px;
 $btn-font-size: 14px;
+
+//dropdowns
+
+$dropdown-link-hover-color: #E92222;
+$dropdown-link-hover-bg: none;
 
 // Inputs
 
@@ -41,7 +46,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1250px
+  xl: 1140px
 )
 
 

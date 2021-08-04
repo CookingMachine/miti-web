@@ -43,11 +43,12 @@ body {
 }
 
 .header {
+    position: fixed;
+    z-index: 1;
     padding-top: 15px;
     width: 100%;
-    margin: 0px auto;
     height: 100px;
-    border-bottom: 1px solid #E4E4E4;
+    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.14);
     background: #fff;
 
     .buttonsAuth {
@@ -55,9 +56,13 @@ body {
         text-align: right;
     }
 
-    
+    .button {
+        margin-left: 30px;
+        font-weight: 500;
+    }
 
     .buttonsAuth svg {
+        color: #E92222;
         margin-bottom: 3px;
     }
     
@@ -74,11 +79,10 @@ body {
     }
 
     .logo {
-        display: flex;
         text-decoration: none;
         color: #E92222;
         font-family: 'Akronim', cursive;
-        font-size: 2.85em;
+        font-size: 2.7em;
     }
 
      input {
@@ -87,22 +91,25 @@ body {
 }
 
 .layout {
-    
     background: #fff;
     margin: 0px auto;
-    padding: 0px;
+    padding-top: 6.5em;
     height: 100%;
 
     .layout-content {
         min-height: 100%;
-        padding-left: 1em;
+        padding-left: 0.95em;
         padding-top: 1em;
-        padding-right: 1em;
+        padding-right: 0.95em;
         padding-bottom: 4.5em;
     }
 
+    .search-filter {
+        display: flex;
+    }
+
     .menu {
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        margin: 0px auto;
         text-align: center;
         // border-top: 1px solid #f2eeee;
         // border-bottom: 1px solid #f2eeee;
@@ -114,6 +121,14 @@ body {
         font-size: 0.95em;
         text-transform: uppercase;
         font-weight: bold;
+    }
+
+    .tabNav:first-child {
+        margin-left: 0px;
+    }
+
+    .tabNav:last-child {
+        margin-right: 0px;
     }
 
     &-content {

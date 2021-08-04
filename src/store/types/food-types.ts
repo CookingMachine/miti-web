@@ -5,7 +5,7 @@ export interface Category {
     id: string;
 }
 
-export interface restaurants {
+export interface Restaurant {
     id: number;
     name: string;
     station: string;
