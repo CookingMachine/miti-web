@@ -32,9 +32,6 @@ const CategoryPage = ({category, recipes}: Props) => {
                         <RecipeCard key={i} recipe={recipe} />
                     ))}
                 </Col>
-                <Col xs={6}>
-                    <PopularRecipes/>
-                </Col>
             </Row>
         </div>
     )

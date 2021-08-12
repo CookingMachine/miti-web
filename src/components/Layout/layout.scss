@@ -57,7 +57,7 @@ body {
     }
 
     .button {
-        margin-left: 30px;
+        margin-left: 61px;
         font-weight: 500;
     }
 
@@ -88,6 +88,10 @@ body {
      input {
         border-left: none;
     }   
+
+    .input-group-text {
+        padding-right: 0px;
+    }
 }
 
 .layout {
