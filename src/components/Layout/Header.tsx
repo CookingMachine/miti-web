@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Button, Container, Input } from 'reactstrap';
 import { InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
-import ModalAuth from 'components/Layout/ModalAuth';
 
 interface Props {
     
@@ -41,7 +40,7 @@ const Header = ({}: Props) => {
                                     <path d="M7.5 5.83333L6.33333 7L8.5 9.16667H0V10.8333H8.5L6.33333 13L7.5 14.1667L11.6667 10L7.5 5.83333ZM15 15.8333H8.33333V17.5H15C15.9167 17.5 16.6667 16.75 16.6667 15.8333V4.16667C16.6667 3.25 15.9167 2.5 15 2.5H8.33333V4.16667H15V15.8333Z" fill="#E92222"/>
                                 </svg>  Вход</Link>
                             <span> / </span>
-                            <Link to="#">Регистрация</Link>
+                            <Link to="#" onClick={toggle}>Регистрация</Link>
                         </div>
                     </Col>
                     <Col xs="auto">
