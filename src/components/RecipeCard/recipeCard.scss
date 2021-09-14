@@ -1,7 +1,7 @@
 .recipe-card {
     color: #000;
     padding-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding-bottom: 15px;
     margin: 0px auto;
     padding-left: 0px;
@@ -14,11 +14,7 @@
     .card-subtitle {
         display: grid;
     }
-    
-    // .recipe-count {
-    //     margin-bottom: 2em;
-    // }
-
+   
     svg {
         margin-bottom: 2px;
     }
@@ -56,10 +52,8 @@
         bottom: 16px;
     }
 
-    
-
     .card-title {
-        font-family: 'Roboto', sans-serif;
+        // font-family: 'Montserrat', sans-serif;
         font-size: 1.25em;
         font-weight: 500;
         color: #000;
@@ -72,8 +66,6 @@
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.23);
     }
 
-    
-
     .recipeImg {
         position: absolute;
         top: 0;
@@ -83,8 +75,6 @@
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
     }
-
-
 }
 
 .recipe-card .card-box:hover {

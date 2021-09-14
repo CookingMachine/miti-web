@@ -46,8 +46,10 @@ const Layout = ({children, isLoading, categories, recipes, init}: Props) => {
 
     return (
         <div>
-            <Header/>
             <Container className='layout'>
+                    <Col xs={12}>
+                        <Header/>
+                    </Col>
                 <Row>
                     <Col xs={12}>
                         <Tabs categories={categories} />
