@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Row, Col } from 'reactstrap';
-import logo from './logo.png';
+import { Link } from 'react-router-dom';
+import { Row, Col, Container } from 'reactstrap';
 
 interface Props {
     
@@ -8,18 +8,12 @@ interface Props {
 
 const Footer = ({}: Props) => {
     return (
-    <div className="footer-box">
-       <Row className="footer">
-           <Col md={4}>
-           <img src={logo}/>
-           </Col>
-           <Col md={4}>
-
-           </Col>
-           <Col md={4}>
-          
-           </Col>
-       </Row>
+    <div className="footer">
+       <Container>
+           <Row>
+                <Link className="logo" to="/">Make·It·Taste·It</Link>
+           </Row>
+       </Container>
     </div>
     )
 }

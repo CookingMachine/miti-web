@@ -24,14 +24,15 @@ const CategoryPage = ({category, recipes}: Props) => {
     return (
         <div className='category-page'>
             <Row>
-                <Col xs={9}>
+                <Col xs={6}>
                     <h1>{category.name}</h1>
                     {category.description}
+                    <p>Сортировать по: <span>по релевантности</span><span>по дате добавления</span><span>по популярности</span></p>
                     {recipes.map((recipe, i) => (
                         <RecipeCard key={i} recipe={recipe} />
                     ))}
                 </Col>
-                <Col xs={3}>
+                <Col xs={6}>
                     <PopularRecipes/>
                 </Col>
             </Row>

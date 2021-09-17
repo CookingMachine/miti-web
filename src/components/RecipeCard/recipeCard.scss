@@ -1,17 +1,82 @@
 .recipe-card {
+    color: #000;
     padding-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 15px;
     margin: 0px auto;
     padding-left: 0px;
     padding-right: 0px;
 
+    .card-title {
+        margin-bottom: 10px;
+    }
+
     .card-subtitle {
         display: grid;
-        justify-content: space-between;
+    }
+   
+    svg {
+        margin-bottom: 2px;
+    }
+
+    .recipe-bottom {
+        position: absolute;
+        bottom: 20px;
+        left: 210px;
+        font-size: 12px;
+    }
+
+    .recipe-bottom span {
+        margin-right: 1.5em;
+    }
+
+    .recipe-bottom svg {
+        margin-right: 0.2em;
+    }
+
+    .recipe-count svg {
+        margin-right:0.4em;
+        margin-bottom: 0.1em;
+    }
+
+    .count-info {
+        margin-right: 1.8em;
+    }
+
+    .card-box button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 11px;
+        padding-right: 11px;
+        position: absolute;
+        bottom: 16px;
+    }
+
+    .card-title {
+        // font-family: 'Montserrat', sans-serif;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #000;
     }
 
     .card-box {
-        width: 275px;
+        height: 180px;
+        width: 570px;
         color: #666666;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.23);
     }
+
+    .recipeImg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 180px;
+        height: 180px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+.recipe-card .card-box:hover {
+    text-decoration: none;
 }

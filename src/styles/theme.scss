@@ -1,5 +1,52 @@
-
+// Colors
 $body-color: #222;
+$secondary: #222;
+$primary: #E92222;
 
-$primary: #222;
-$secondary: #fc3a3b;
+$enable-prefers-reduced-motion-media-query: false;
+
+// Button
+
+$btn-border-radius: 30px;
+$btn-border-width: 1px;
+$btn-padding-y: 12px;
+$btn-padding-x: 37px;
+$btn-font-size: 14px;
+
+//dropdowns
+
+$dropdown-link-hover-color: #E92222;
+$dropdown-link-hover-bg: none;
+
+// Inputs
+
+$input-group-addon-bg: #fff;
+$input-border-radius: 20px;
+$input-btn-focus-width: 0px;
+$input-focus-border-color:none;
+$input-border-color: #E4E4E4;
+$input-placeholder-color:  #9A9A9A;
+
+// Cards
+
+$card-border-width: 0px;
+$card-spacer-y: 5px;
+$card-spacer-x: 1.25em;
+
+body .btn-primary {
+    background-color: #fff;
+    color: #E92222;
+}
+
+body .header .input-group-text {
+    border-right: none;
+}
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1250px
+)
+
+
